@@ -1,0 +1,59 @@
+#docker compose up -d
+#docker compose restart pihole
+#docker compose logs -f
+
+
+
+
+
+version: '3.9'
+
+networks:
+  macvlan_network:
+    external: true  # Uses the manually created macvlan
+
+services:
+  jellyfin:
+    container_name: jellyfin
+    image: jellyfin/jellyfin:latest
+    networks:
+      macvlan_network:
+        ipv4_address: 192.168.1.110
+    volumes:
+      - jellyfin_data:/config
+      - media:/media
+    restart: unless-stopped
+
+  pihole:
+    container_name: pihole
+    image: pihole/pihole:latest
+    networks:
+      macvlan_network:
+        ipv4_address: 192.168.1.111  # Static IP for Pi-hole
+    environment:
+      TZ: "America/Denver"
+      WEBPASSWORD: "Super123!"
+    volumes:
+      - pihole_data:/etc/pihole
+      - dnsmasq_data:/etc/dnsmasq.d
+    restart: unless-stopped
+
+  utorrent:
+    container_name: utorrent
+    image: ekho/utorrent:latest
+    networks:
+      macvlan_network:
+        ipv4_address: 192.168.1.112
+    volumes:
+      - utorrent_data:/config
+      - downloads:/downloads
+    restart: unless-stopped
+
+
+volumes:
+  pihole_data:
+  dnsmasq_data:
+  utorrent_data:
+  downloads:
+  jellyfin_data:
+  media:
