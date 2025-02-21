@@ -21,6 +21,20 @@ Fedora
 
 
 # Setup Notes
+### Here's the Plan:
+Docker containers:
+	jellyfin
+	pihole
+	qbittorrent
+	RustDesk
+	DuckDNS or something?
+	Guacamole?
+
+VM:
+	DONE homeassistant
+
+
+
 
 ### To Set Up a Bridge
 For the HA VM to get an IP from my router.
