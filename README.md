@@ -16,7 +16,7 @@ Fedora
 | Container | IP  
 | --------- | ---
 | Jellyfin  | 192.168.1.110
-| PiHole    | 192.168.1.111
+| PiHole    | 192.168.1.111 | /admin
 | qBitTorrent | 192.168.1.112
 
 
