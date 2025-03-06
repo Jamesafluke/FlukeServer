@@ -29,6 +29,7 @@ Docker containers:
 	RustDesk
 	DuckDNS or something?
 	Guacamole?
+ 	Something for RSS?
 
 VM:
 	DONE homeassistant
