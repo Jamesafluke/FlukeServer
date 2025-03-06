@@ -45,9 +45,9 @@ Remove the ethernet connection from the NIC. (Or something)
 
 
 
-### Set up Docker Networking
-Tried this first: (remove this line in the event this works)
-sudo docker network create --driver macvlan --subnet=192.168.1.96/28 --gateway=192.168.1.100 -o parent=nm-bridge my_macvlan_network
+### Docker macvlan Networking
+Docker networking is all in docker compose. 
+
 
 
 # Other Random Notes
