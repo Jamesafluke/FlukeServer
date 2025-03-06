@@ -13,11 +13,11 @@ Fedora
 
 
 ### Docker
-| Container | IP  
-| --------- | ---
-| Jellyfin  | 192.168.1.110 |
+| Container | IP | Access
+| --------- | --- | ---
+| Jellyfin  | 192.168.1.110 | /
 | PiHole    | 192.168.1.111 | /admin
-| qBitTorrent | 192.168.1.112 |
+| qBitTorrent | 192.168.1.112 | /
 
 
 # Setup Notes
