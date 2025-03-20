@@ -15,15 +15,15 @@ Fedora
 ### Docker
 | Container | IP | Access
 | --------- | --- | ---
-| Jellyfin  | 192.168.1.110 | /
-| PiHole    | 192.168.1.111 | /admin
+| Jellyfin  | 192.168.1.110 | http://192.168.1.110:8096/
+| PiHole    | 192.168.1.111 | http://192.168.1.111/admin
 | qBitTorrent | 192.168.1.112 | /
 
 
 # Setup Notes
 ### Here's the Plan:
 Docker containers:
-	jellyfin
+	DONE jellyfin
 	pihole
 	qbittorrent
 	RustDesk
